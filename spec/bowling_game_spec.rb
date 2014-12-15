@@ -36,4 +36,10 @@ describe 'Bowling Game' do
 		12.times {@game.roll 10}
 		expect(@game.score).to eq 300
 	end
+
+	it 'can roll all spare' do 
+		21.times{@game.roll 5}
+		expect(@game.score).to eq 150
+	end
+
 end
